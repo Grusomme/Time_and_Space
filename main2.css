@@ -1,0 +1,84 @@
+*{margin:0; padding:0;}
+
+
+h1{
+	font-size: 250%;
+	padding-top: 20px;
+}
+body{
+	text-align: center;
+	background: gray;
+	color: #252E30;
+	font: Tahoma;
+}
+
+#main-wrapper {
+
+	box-shadow:rgb(110,110,110) 4px 4px 20px; 
+	width: 70%;
+	height: 200%;
+	margin: auto;
+	background-color: #FBFFFB;
+}
+
+.bildegruppe{
+	width: 500px; /*Same as width of the large image*/
+	position: relative;
+	
+	/*Instead of height we will use padding*/
+	padding-top: 330px; /*That helps bring the labels down*/
+	
+	margin: 70px auto;
+	
+	/*Lets add a shadow*/
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+
+/*Last thing remaining is to add transitions*/
+.bildegruppe>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+}
+
+.bildegruppe input[name='velger'] {
+	display: none;
+}
+
+.bildegruppe label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 13px 0 0 13px;
+	border: 2px solid gray;
+	
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+	
+	/*Default style = low opacity*/
+	opacity: 0.7;
+}
+
+.bildegruppe label img{
+	display: block;
+}
+
+/*Time to add the click effects*/
+.bildegruppe input[name='velger']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.bildegruppe input[name='velger'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.bildegruppe input[name='velger']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
+}
+/*Clicking on any thumbnail now should activate the image related to it*/
