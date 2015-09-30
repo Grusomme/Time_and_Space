@@ -14,95 +14,58 @@
   <div id="main-wrapper">
 
     <header>
-    <h1>Space and Time</h1>
-    <hr>
-    <h2>En katamarans reise</h2>
-    <a href="#" onclick="switchCSS('css/one.css', 'css/two.css');
-    return false;"> <h3>Change Style</h3> </a>
-
+      <h1>Space and Time</h1>
+      <hr>
+      <h2>En katamarans reise</h2>
+      <a href="#" onclick="switchCSS('css/one.css', 'css/two.css');
+      return false;"> <h3>Change Style</h3> </a>
     </header>
 
-    <article>
-      <section>
-        <div class="slider-elements"> <!-- Contains all slider elements, first thumbnail is checked by default -->
-          <input type="radio" name="velger" id="grp1" checked="checked"/>
-			    <label for="grp1">
-				  <!-- Thumbnail img, downsized display of original img, not separate -->
-			    <img src="img/filipinene_resize.jpg" width="80"/>
-			    </label>
-				  <img src="img/filipinene_resize.jpg"/>
-        </div>
-        <div class="article-images">
-            <img id="img1" src="img/filipinene_resize.jpg" height="282" width="500">
-        </div>
+    <article class="slider-container"> <!-- Contains all slider elements -->
+
+        <img class="article-image" id="img1" src="img/filipinene_resize.jpg">
+        <input class="slider-element" type="radio" name="velger" id="grp1"/>
+        <label class="slider-element slider-thumb" for="grp1">
+          <!-- Thumbnail img -->
+          <img class="slider-element" src="img/filipinene_resize.jpg" width="80"/>
+        </label>
+        <img class="slider-element" src="img/filipinene_resize.jpg"/>
         <p>Båten påbegynes. Dette er fra Filipinene i 2012 hvor min far har startet arbeidet. Dette er det ene av skrågenes skjelett. Denne er laget av trelister, dette skrues og limes sammen, slik bildet viser. Vi legger så på kryssfinerplater og coater hele riggen med glassfiber og rundt 60 liter epoxy. Arbeidet foregår i halvannet år, før vi er klare til å sende båten tilbake til Norge.</p>
-      <section>
-    </article>
 
-    <article>
-      <section>
-        <div class="slider-elements"> <!-- Contains all slider elements -->
-          <input type="radio" name="velger" id="grp2"/>
-          <label for="grp2">
+        <img class="article-image" id="img2" src="img/ankommer_resize.jpg">
+        <input class="slider-element" type="radio" name="velger" id="grp2"/>
+        <label class="slider-element slider-thumb" for="grp2">
           <!-- Thumbnail img -->
-          <img src="img/ankommer_resize.jpg" width="80"/>
-          </label>
-          <img src="img/ankommer_resize.jpg"/>
-        </div>
-        <div class="article-images"> <!-- Article view, image only -->
-            <img id="img2" src="img/ankommer_resize.jpg">
-        </div>
+          <img class="slider-element" src="img/ankommer_resize.jpg" width="80"/>
+        </label>
+        <img class="slider-element" src="img/ankommer_resize.jpg"/>
         <p>Konteineren med båten ankommer Norge i juli 2014. Det var noen mindre skader i transporten, men ikke kritisk. Den mangler enda motorer, propeller, utstyr samt masse arbeid.</p>
-      </section>
-    </article>
 
-    <article>
-      <section>
-        <div class="slider-elements"> <!-- Contains all slider elements -->
-          <input type="radio" name="velger" id="grp3"/>
-          <label for="grp3">
+        <img class="article-image" id="img3" src="img/svenskene_resize.jpg">
+        <input class="slider-element" type="radio" name="velger" id="grp3"/>
+        <label class="slider-element slider-thumb" for="grp3">
           <!-- Thumbnail img -->
-          <img src="img/svenskene_resize.jpg" width="80"/>
-          </label>
-          <img src="img/svenskene_resize.jpg"/>
-        </div>
-        <div class="article-images"> <!-- Article view, image only -->
-            <img id="img3" src="img/svenskene_resize.jpg">
-        </div>
+          <img class="slider-element" src="img/svenskene_resize.jpg" width="80"/>
+        </label>
+        <img class="slider-element" src="img/svenskene_resize.jpg"/>
         <p>Vinteren 2014, forhandlinger med en Svensk leverandør. Vi har bestemt oss for å bruke elmotorer på båten. Vi vil bruke to DC motorer med store Lithium batteripakker. En kostbar afære, men det sparer seg inn over tid. Vi velger også løsninger på styresystemer, ladere, propeller med mer, fra disse hyggelige karene.</p>
-      </section>
-    </article>
 
-    <article>
-      <section>
-        <div class="slider-elements"> <!-- Contains all slider elements -->
-          <input type="radio" name="velger" id="grp4"/>
-          <label for="grp4">
+        <img class="article-image" id="img4" src="img/bygging_resize.jpg">
+        <input class="slider-element" type="radio" name="velger" id="grp4"/>
+        <label class="slider-element slider-thumb" for="grp4">
           <!-- Thumbnail img -->
-          <img src="img/bygging_resize.jpg" width="80"/>
-          </label>
-          <img src="img/bygging_resize.jpg"/>
-        </div>
-        <div class="article-images"> <!-- Article view, image only -->
-            <img id="img4" src="img/bygging_resize.jpg">
-        </div>
+          <img class="slider-element" src="img/bygging_resize.jpg" width="80"/>
+        </label>
+        <img class="slider-element" src="img/bygging_resize.jpg"/>
         <p>Gjøvik sommeren 2015 har vi bygget en hall. Nå står båten her for videre ferdigjøring. Vi pusser, forsterker samt fikser opp i feil vi har gjort tidligere. Propellrør og akslinger monteres. Det er mye jobb, men det går sakte og sikkert mot mål.</p>
-      </section>
-    </article>
 
-    <article>
-      <section>
-        <div class="slider-elements"> <!-- Contains all slider elements -->
-          <input type="radio" name="velger" id="grp5"/>
-          <label for="grp5">
+        <img class="article-image" id="img5" src="img/flyter_resize.jpg">
+        <input class="slider-element" type="radio" name="velger" id="grp5"/>
+        <label class="slider-element slider-thumb" for="grp5">
           <!-- Thumbnail img -->
-          <img src="img/flyter_resize.jpg" width="80"/>
-          </label>
-          <img src="img/flyter_resize.jpg"/>
-        </div>
-        <div class="article-images"> <!-- Article view, image only -->
-            <img id="img5" src="img/flyter_resize.jpg">
-        </div>
-        <p>Sjøsetting på Milde August 2015. Vi har i en hel natt ventet på tidevannet. Det var veldig komplisert å få satt båten på sjøen, dette grunnet at vi hadde en spesialhenger vi modifiserte selv. Vi kunne ikke vite sikkert om arbeidet vi hadde gjort, var hundre prosent tett. Lettelsen var derfor stor da båten lå pent i vannet dagen etter. Nå mangler overbygg og pynting, så er det duket for rekefest til neste vår. </p>
-      </section>
+          <img class="slider-element" src="img/flyter_resize.jpg" width="80"/>
+        </label>
+        <img class="slider-element" src="img/flyter_resize.jpg"/>
+        <p>Sjøsetting på Milde August 2015. Vi har i en hel natt ventet på tidevannet. Det var veldig komplisert å få satt båten på sjøen, dette grunnet at vi hadde en spesialhenger vi modifiserte selv. Vi kunne ikke vite sikkert om arbeidet vi hadde gjort, var hundre prosent tett. Lettelsen var derfor stor da båten lå pent i vannet dagen etter. Nå mangler overbygg og pynting, så er det duket for rekefest til neste vår.</p>
+
     </article>

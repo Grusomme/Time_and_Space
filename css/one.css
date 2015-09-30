@@ -32,7 +32,7 @@ header h2 {
 }
 
 /* Hide slider view, this is only used in second stylesheet (two.css)*/
-.slider-elements {
+.slider-element {
   display: none;
 }
 
@@ -57,7 +57,7 @@ section > p {
 
   section > p {
     padding-top: 0.7em;
-    padding-bottom: 2.5em;  
+    padding-bottom: 2.5em;
   }
 
 }
