@@ -27,6 +27,73 @@ header h2 {
 
 #main-wrapper {
   padding: 0 1em;
-  max-width: 31em;
+  max-width: 50em;
   margin: auto;
+}
+
+/* Hide article images */
+.article-images {
+  display: none;
+}
+
+.slider-elements {
+	width: 500px; /*Same as width of the large image*/
+	position: relative;
+
+	/*Instead of height we will use padding*/
+	padding-top: 330px; /*That helps bring the labels down*/
+
+	margin: 70px auto;
+
+	/*Lets add a shadow*/
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+/*Last thing remaining is to add transitions*/
+.slider-elements>img{
+	position: absolute;
+	left: 0; top: 0;
+	transition: all 0.5s;
+}
+
+.slider-elements input[name='velger'] {
+	display: none;
+}
+
+.slider-elements label {
+	/*Lets add some spacing for the thumbnails*/
+	margin: 13px 0 0 13px;
+	border: 2px solid gray;
+
+	float: left;
+	cursor: pointer;
+	transition: all 0.5s;
+
+	/*Default style = low opacity*/
+	opacity: 0.7;
+}
+
+.slider-elements label img{
+	display: block;
+}
+
+/*Time to add the click effects*/
+.slider-elements input[name='velger']:checked+label {
+	border-color: #666;
+	opacity: 1;
+}
+
+/*Clicking any thumbnail now should change its opacity(style)*/
+/*Time to work on the main images*/
+.slider-elements input[name='velger'] ~ img {
+	opacity: 0;
+	transform: scale(1.1);
+}
+
+/*That hides all main images at a 110% size
+On click the images will be displayed at normal size to complete the effect
+*/
+.slider-elements input[name='velger']:checked+label+img {
+	opacity: 1;
+	transform: scale(1);
 }
