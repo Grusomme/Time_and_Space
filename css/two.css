@@ -71,16 +71,13 @@ img.slider-element {
 	display: none;
 }
 
+/* Style thumbs and give inactive ones 50pct opacity */
 .slider-container label.slider-thumb {
-	/*Lets add some spacing for the thumbnails*/
-	margin: 13px 0 0 13px;
+	margin: 20px 0 0 13px;
 	border: 1px solid gray;
-
 	float: left;
 	cursor: pointer;
 	transition: all 0.5s;
-
-	/*Default style = low opacity*/
 	opacity: 0.5;
 }
 
@@ -89,34 +86,28 @@ img.slider-element {
 }
 
 
-/*Time to add the click effects*/
+/* Border and full opacity to the active thumb */
 .slider-container input[name='velger']:checked+label {
 	border-color: #666;
 	opacity: 1;
 }
 
-/*Time to work on the main images*/
+/* Make all images transparent */
 .slider-container input[name='velger'] ~ img {
 	opacity: 0;
-	transform: scale(1.1);
 }
 
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
+/* Full opacity to the active thumb */
 .slider-container input[name='velger']:checked+label+img {
 	opacity: 1;
-	transform: scale(1);
 }
 
-/*Time to work on the main images*/
-.slider-container input[name='velger'] ~ p {
+/* Hide text */
+.slider-container p {
 	opacity: 0;
 }
 
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
-.slider-container input[name='velger']:checked+p {
+/* Show selected image */
+.slider-container input[name='velger']:checked+label+img+p {
 	opacity: 1;
 }
