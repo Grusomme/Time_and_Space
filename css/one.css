@@ -45,6 +45,8 @@ section > p {
   font-family: Georgia, serif;
   padding-top: 0.5em;
   padding-bottom: 1.5em;
+  font-style: italic;
+
 }
 }
 
@@ -53,5 +55,10 @@ section > p {
 }
 
 @media screen and (min-width: 1300px) /* Desktop */ {
+
+  section > p {
+    padding-top: 0.7em;
+    padding-bottom: 2.5em;  
+  }
 
 }
