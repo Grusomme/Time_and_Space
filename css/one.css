@@ -6,6 +6,8 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid gray;
+	  box-shadow:rgb(110,110,110) 1px 1px 1px;
 }
 
 hr {width: 15em;}
@@ -19,10 +21,18 @@ header h1 {
 }
 
 header h2 {
+  font-family: Georgia, serif;
   font-size: 1em;
   text-align: center;
   padding-bottom: 1.5em;
   font-weight: 100;
+}
+header h3 {
+  font-size: 0.5em;
+  position: absolute;
+  right: 30%;
+  top: 5%;
+
 }
 
 #main-wrapper {
@@ -35,29 +45,55 @@ header h2 {
 .slider-element {
   display: none;
 }
-
+/*Styling for mobile devices */
 @media screen and (min-width: 530px) /* Mobile */ {
+  header h1 {
+    font-size: 2em;
+  }
+
+article > p {
+  padding-top: 0.5em;
+  padding-bottom: 1.5em;
+
+}
+/*TODO */
+@media screen and (min-width: 960px) /* Pad */ {
+
+}
+/*Spesific styling for larger Viewports */
+@media screen and (min-width: 1300px) /* Desktop */ {
+  body {
+  	background-color: gray;
+  }
+  #main-wrapper {
+    box-shadow:rgb(110,110,110) 4px 4px 20px;
+    max-width:68em;
+    height: inherited on;
+    margin: auto;
+    background-color: #FBFFFB;
+    padding: 10px;
+  }
+
+  article{
+    display: inline-block;
+  }
+  article > p {
+    float:right;
+    font-size: 1.1em;
+    padding-left: 16em;
+    padding-right: 16em;
+    padding-top: 1em;
+    padding-bottom: 3em;
+  }
+
   header h1 {
     font-size: 3em;
   }
 
-section > p {
-  font-family: Georgia, serif;
-  padding-top: 0.5em;
-  padding-bottom: 1.5em;
-  font-style: italic;
-
+  header h2 {
+    font-size: 1.6em;
 }
-
-@media screen and (min-width: 960px) /* Pad */ {
-
-}
-
-@media screen and (min-width: 1300px) /* Desktop */ {
-
-  section > p {
-    padding-top: 0.7em;
-    padding-bottom: 2.5em;
+  img {
+    position: relative;
   }
-
 }

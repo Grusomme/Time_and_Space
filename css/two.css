@@ -6,6 +6,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+		border: 1px solid gray;
 }
 
 hr {width: 15em;}
@@ -19,32 +20,39 @@ header h1 {
 }
 
 header h2 {
-  font-size: 1em;
+  font-family: Georgia, serif;
+	font-size: 1em;
   text-align: center;
   padding-bottom: 1.5em;
   font-weight: 100;
 }
+header h3 {
+  font-size: 0.5em;
+  position: absolute;
+  right: 30%;
+  top: 5%;
 
+}
 #main-wrapper {
   padding: 0 1em;
   max-width: 50em;
   margin: auto;
 }
 
-/* Hide article images */
+/* Hide article images. For use in other stylesheet (one.css) */
 .article-image {
   display: none;
 }
 
 .slider-container {
-	width: 500px; /*Same as width of the large image*/
+	width: 500px; /*Setting box to same size as images*/
 	position: relative;
 
-	/*Instead of height we will use padding*/
-	padding-top: 285px; /*That helps bring the labels down*/
-
+ /*Padding the labels*/
+	padding-top: 285px;
 	margin: 50px auto;
 }
+
 
 img.slider-element {
   box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.75);
@@ -60,12 +68,13 @@ img.slider-element {
 	transition: all 0.5s;
 }
 
-/*Last thing remaining is to add transitions*/
+/*Fixed position for all images*/
 .slider-container>img{
 	position: absolute;
 	left: 0; top: 0;
 	transition: all 0.5s;
 }
+
 
 .slider-container input[name='velger'] {
 	display: none;
@@ -81,6 +90,7 @@ img.slider-element {
 	opacity: 0.5;
 }
 
+/* Display thumbs correctly */
 .slider-container label img {
 	display: block;
 }
@@ -97,17 +107,54 @@ img.slider-element {
 	opacity: 0;
 }
 
-/* Full opacity to the active thumb */
+/* Full opacity to the active image*/
 .slider-container input[name='velger']:checked+label+img {
 	opacity: 1;
 }
 
-/* Hide text */
+/* Hide all text */
 .slider-container p {
 	opacity: 0;
 }
 
-/* Show selected image */
+/* Show selected assosiated text */
 .slider-container input[name='velger']:checked+label+img+p {
 	opacity: 1;
+
+}
+
+
+@media screen and (min-width: 530px) /* Mobile */ {
+	header h1 {
+    font-size: 2em;
+  }
+
+article > p {
+  padding-top: 0.5em;
+  padding-bottom: 1.5em;
+
+}
+	@media screen and (min-width: 960px) /* Pad */ {
+
+	}
+
+	@media screen and (min-width: 1300px) /* Desktop */ {
+		body {
+			background-color: gray;
+		}
+
+		#main-wrapper {
+	  box-shadow:rgb(110,110,110) 4px 4px 20px;
+	  max-width:68em;
+		height: 83%;
+		margin: auto;
+		background-color: #FBFFFB;
+		padding: 5em;
+}
+	header h1 {
+    font-size: 3em;
+  }
+
+  header h2 {
+    font-size: 1.6em;
 }
