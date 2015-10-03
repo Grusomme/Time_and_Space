@@ -1,4 +1,9 @@
-body {}
+
+	#main-wrapper {
+	  padding: 0 1em;
+	  max-width: 50em;
+	  margin: auto;
+	}
 
 img {
     max-width: 100%;
@@ -32,11 +37,6 @@ header h3 {
   right: 30%;
   top: 5%;
 
-}
-#main-wrapper {
-  padding: 0 1em;
-  max-width: 50em;
-  margin: auto;
 }
 
 /* Hide article images. For use in other stylesheet (one.css) */
